@@ -41,14 +41,14 @@ public class DiceGame {
 
 		double randomNumber = Math.random();
 
-		 // changing range to 0 - almost(10)
+		 // changing range to 0 - almost(range)
 
 		 randomNumber = randomNumber * range;
 		
 		 //casting to integer
 		 int randomInt = (int)randomNumber;
 
-		 // shifting to range of 10
+		 // shifting to range of range
 		 randomInt = randomInt + 1;
 
 		return randomInt;
