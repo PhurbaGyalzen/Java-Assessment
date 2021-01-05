@@ -27,6 +27,17 @@ public class Iteration {
 		}
 		sc.close();
 		
+		System.out.println();
+		
+		// display using for-each
+		
+		for (int row[] : ua) {
+			for (int col: row) {
+				System.out.print(col + ' ');
+			}
+			System.out.println();
+		}
+		
 	
 	}
 

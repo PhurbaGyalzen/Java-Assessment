@@ -3,12 +3,11 @@ import java.util.Arrays;
 public class RainProblem {
 
 	public static void main(String[] args) {
-		int[] height = {2,0,4,1,4};
+		int[] height = {2,0,4,3,5};
 		System.out.println("Height Array: "+ Arrays.toString(height));
-		function(height);
-
+		System.out.println("The total unit of water that can be stored: "+ getStoredWater(height) + " unit(s).");
 	}
-	public static void function(int[] height) {
+	public static int getStoredWater(int[] height) {
 		int length = height.length;
 		
 		int total = 0;
@@ -31,12 +30,8 @@ public class RainProblem {
 			for (int i = 0; i<length;i++) {
 				total = total + (Math.min(rightArray[i], leftArray[i])-height[i]);
 			}
-			
-			System.out.println("The total unit of water that can be stored: "+ total + " unit(s).");
-		
-		} else {
-			System.out.println("Rain water cannot be stored.");
-		}
+		} 
+		return total;
 		
 		
 	}
